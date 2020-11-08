@@ -12,22 +12,22 @@
     </aside>
     <div class="col-sm-8">
         <ul class="nav nav-tabs nav-justified mb-3">
-            <li class="nav-item">  <!--改行 -->
+            <li class="nav-item"> <!--改行 -->
                 <a href="<%= user_path(@user) %>" class="nav-link <%= 'active' if current_page?(user_path(@user)) %>"> <!--改行 -->
                     Microposts <span class="badge badge-secondary"><%= @count_microposts %></span> <!--改行 -->
                 </a>
             </li>
             <li class="nav-item"> <!--改行 -->
                 <a href="<%= followings_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(followings_user_path(@user)) %>"> <!--改行 -->
-                    Followings <span class="badge badge-secondary"><%= @count_followings %></span> <!--改行 -->
+                    Followings <span class="badge badge-secondary"><%= @count_Followings %></span> <!--改行 -->
                 </a>
             </li>
             <li class="nav-item"> <!--改行 -->
                 <a href="<%= followers_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(followers_user_path(@user)) %>"> <!--改行 -->
-                    Followers <span class="badge badge-secondary"><%= @count_followers %></span> <!--改行 -->
+                    Followers <span class="badge badge-secondary"><%= @count_followsers %></span> <!--改行 -->
                 </a>
             </li>
         </ul>
-        <%= render 'microposts/microposts', microposts: @microposts %>
+        <%= render 'users', users: @followers %>
     </div>
 </div>
